@@ -1,0 +1,12 @@
+[
+    {
+	"name" : "xiaoy",
+	"age" :17,
+	"location" : "beijing" 
+    }
+    ,
+    {
+	"name" : "xiaot",
+	"age" : 20
+    }
+]

@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/DataWrite.hh
+cstring
+-
+fstream
+-
+
+../include/writetest1.hh
+DataWrite.hh
+../include/DataWrite.hh
+
+/home/wu/桌面/cmake_muban/input.cc
+iostream
+-
+fstream
+-
+cstdlib
+-
+DataWrite.hh
+/home/wu/桌面/cmake_muban/DataWrite.hh
+writetest1.hh
+/home/wu/桌面/cmake_muban/writetest1.hh
+
+/home/wu/桌面/cmake_muban/src/DataWrite.cc
+DataWrite.hh
+/home/wu/桌面/cmake_muban/src/DataWrite.hh
+cstdlib
+-
+iostream
+-
+
+/home/wu/桌面/cmake_muban/src/writetest1.cc
+writetest1.hh
+/home/wu/桌面/cmake_muban/src/writetest1.hh
+iostream
+/home/wu/桌面/cmake_muban/src/iostream
+

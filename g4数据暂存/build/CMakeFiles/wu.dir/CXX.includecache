@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Data.hh
+cstring
+-
+string
+-
+
+/home/wu/test/技术储备/g4数据暂存/input.cc
+Data.hh
+/home/wu/test/技术储备/g4数据暂存/Data.hh
+vector
+-
+iostream
+/home/wu/test/技术储备/g4数据暂存/iostream
+
+/home/wu/test/技术储备/g4数据暂存/src/Data.cc
+Data.hh
+/home/wu/test/技术储备/g4数据暂存/src/Data.hh
+

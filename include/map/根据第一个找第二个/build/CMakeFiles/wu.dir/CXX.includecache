@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/wuhongyi.hh
+map
+-
+cstring
+-
+iostream
+-
+
+/home/wu/桌面/cmake_muban/input.cc
+wuhongyi.hh
+/home/wu/桌面/cmake_muban/wuhongyi.hh
+iostream
+/home/wu/桌面/cmake_muban/iostream
+
+/home/wu/桌面/cmake_muban/src/wuhongyi.cc
+wuhongyi.hh
+/home/wu/桌面/cmake_muban/src/wuhongyi.hh
+

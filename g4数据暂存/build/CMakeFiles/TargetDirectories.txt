@@ -1,0 +1,1 @@
+/home/wu/test/技术储备/g4数据暂存/build/CMakeFiles/wu.dir

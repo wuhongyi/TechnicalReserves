@@ -1,0 +1,56 @@
+digraph model{
+"model" [ color=red, label="RooAddPdf
+model"];
+"bkg" [ color=red, label="RooAddPdf
+bkg"];
+"bkg1" [ color=red, label="RooChebychev
+bkg1"];
+"x" [ color=blue, label="RooRealVar
+x"];
+"a0" [ color=blue, label="RooRealVar
+a0"];
+"a1" [ color=blue, label="RooRealVar
+a1"];
+"bkg1frac" [ color=blue, label="RooRealVar
+bkg1frac"];
+"bkg2" [ color=red, label="RooExponential
+bkg2"];
+"alpha" [ color=blue, label="RooRealVar
+alpha"];
+"bkgfrac" [ color=blue, label="RooRealVar
+bkgfrac"];
+"sig" [ color=red, label="RooAddPdf
+sig"];
+"sig1" [ color=red, label="RooGaussian
+sig1"];
+"mean" [ color=blue, label="RooRealVar
+mean"];
+"sigma1" [ color=blue, label="RooRealVar
+sigma1"];
+"sig1frac" [ color=blue, label="RooRealVar
+sig1frac"];
+"sig2" [ color=red, label="RooGaussian
+sig2"];
+"sigma2" [ color=blue, label="RooRealVar
+sigma2"];
+"model" -> "bkgfrac";
+"model" -> "bkg";
+"model" -> "sig";
+"bkg" -> "bkg1frac";
+"bkg" -> "bkg2";
+"bkg" -> "bkg1";
+"bkg2" -> "alpha";
+"bkg2" -> "x";
+"bkg1" -> "a1";
+"bkg1" -> "a0";
+"bkg1" -> "x";
+"sig" -> "sig1frac";
+"sig" -> "sig2";
+"sig" -> "sig1";
+"sig2" -> "sigma2";
+"sig2" -> "mean";
+"sig2" -> "x";
+"sig1" -> "sigma1";
+"sig1" -> "mean";
+"sig1" -> "x";
+}

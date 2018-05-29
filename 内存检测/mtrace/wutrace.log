@@ -1,0 +1,5 @@
+= Start
+@ ./123:[0x4006b3] + 0x13df770 0x14
+@ /lib64/libc.so.6:(clearenv+0x7a)[0x38cc4351da] - 0x13df010
+@ /lib64/libc.so.6:(tdestroy+0x3d)[0x38cc4e6fdd] - 0x13df2c0
+@ /lib64/libc.so.6:[0x38cc540bac] - 0x13df2f0

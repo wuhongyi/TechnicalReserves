@@ -1,0 +1,1 @@
+/usr/local/bin/g++   -std=c++11 -Wno-deprecated    CMakeFiles/wu.dir/input.cc.o CMakeFiles/wu.dir/src/Data.cc.o  -o ../bin/wu -rdynamic 

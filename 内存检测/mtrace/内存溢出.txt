@@ -1,0 +1,42 @@
+;;内存溢出.txt --- 
+;;
+;;Description: 
+;;Author: Hongyi Wu(吴鸿毅)
+;;Email: wuhongyi@qq.com 
+;;Created: 五 7月 24 13:48:20 2015 (+0800)
+;;Last-Updated: 五 7月 24 13:51:37 2015 (+0800)
+;;          By: Hongyi Wu(吴鸿毅)
+;;    Update #: 1
+;;URL: http://wuhongyi.cn 
+
+所有使用动态内存分配(dynamic memory allocation)的程序都有机会遇上内存泄露(memory leakage)问题.
+
+mtrace是一个C函數，在里声明及定义，函数原型为：
+    void mtrace(void);
+
+其实mtrace是类似malloc_hook的 malloc handler，只不过mtrace的handler function已由系统为你写好，但既然如此，系统又怎么知道你想将malloc/free的记录写在哪里呢？为此，调用mtrace()前要先设置 MALLOC_TRACE环境变量：
+    #include 
+    ....
+    setenv("MALLOC_TRACE", "output_file_name", 1);
+    ...
+
+「output_file_name」就是储存检测结果的文件的名称。
+
+但是检测结果的格式是一般人无法理解的，而只要有安装mtrace的话，就会有一名为mtrace的Perl script，在shell输入以下指令：
+    mtrace [binary] output_file_name
+
+就会将output_file_name的內容转化成能被理解的语句，例如「No memory leaks」，「0x12345678 Free 10 was never alloc」诸如此类。
+
+
+
+使用mtrace来调试程序有4个基本的步骤，需要用到GNU C 函数库里面的一些辅助的函数功能。
+1． 在需要跟踪的程序中需要包含头文件<mcheck.h>，而且在main()函数的最开始包含一个函数调用：mtrace()。由于在 main函数的最开头调用了mtrace()，所以该进程后面的一切分配和释放内存的操作都可以由mtrace来跟踪和分析。
+2． 定义一个环境变量，用来指示一个文件。该文件用来输出log信息。如下的例子：
+$export MALLOC_TRACE=mymemory.log
+3． 正常运行程序。此时程序中的关于内存分配和释放的操作都可以记录下来。
+4． 然后用mtrace使用工具来分析log文件。例如：
+$mtrace testmem $MALLOC_TRACE 
+
+
+;;
+;;内存溢出.txt ends here

@@ -1,0 +1,34 @@
+%%% root.tex --- 
+%% 
+%% Description: 
+%% Author: Hongyi Wu(吴鸿毅)
+%% Email: wuhongyi@qq.com 
+%% Created: 六 12月 27 21:19:31 2014 (+0800)
+%% Last-Updated: 六 12月 27 21:28:08 2014 (+0800)
+%%           By: Hongyi Wu(吴鸿毅)
+%%     Update #: 2
+%% URL: http://wuhongyi.cn 
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{plotmarks}
+\title{A simple LaTeX example}
+\date{July 2013}
+\author{O.Couet}
+\begin{document}
+\maketitle
+The following image as been generated using the TTeXDump class.
+To include it in a LaTeX document it is enough to specify the following
+three directive at the top of the LaTex document:
+
+\begin{figure}[htbp]
+\begin{center}
+\scalebox{0.5}{\input{hpx.tex}}
+\caption{Image ({\tt hpx.tex}) generated thanks to {\tt TTeXDump}}
+\end{center}
+\end{figure}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% root.tex ends here
