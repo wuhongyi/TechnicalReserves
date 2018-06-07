@@ -33,7 +33,7 @@
 void httpserver(const char* jobname = "job1", Long64_t maxcnt = 0)
 {
    TString filename = Form("%s.root", jobname);
-   TFile *hfile = new TMemFile(filename,"RECREATE","Demo ROOT file with histograms");
+   TFile *hfile = new TMemFile("test.root","RECREATE","Demo ROOT file with histograms");
 
    // Create some histograms, a profile histogram and an ntuple
    TH1F *hpx = new TH1F("hpx","This is the px distribution",100,-4,4);
