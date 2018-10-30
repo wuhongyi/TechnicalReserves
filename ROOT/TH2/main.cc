@@ -4,9 +4,9 @@
 // Author: Hongyi Wu(吴鸿毅)
 // Email: wuhongyi@qq.com 
 // Created: 日 3月 22 20:15:15 2015 (+0800)
-// Last-Updated: 五 6月  5 09:45:40 2015 (+0800)
+// Last-Updated: 二 7月 17 05:48:19 2018 (+0800)
 //           By: Hongyi Wu(吴鸿毅)
-//     Update #: 58
+//     Update #: 59
 // URL: http://wuhongyi.cn 
 
 #include <iostream>
@@ -83,6 +83,25 @@ int main(int argc, char *argv[])
  py=h->ProjectionY();
 
 
+
+ TFile *file = new TFile("output.root","RECREATE");//"RECREATE" "READ"
+ if(!file->IsOpen())
+   {
+     std::cout<<"Can't open root file"<<std::endl;
+   }
+
+ h->Write();
+ px->Write();
+ // file->ls("");
+ // file->cd();
+ // TObject->Write();
+ // TH1D *h = (TH1D*)file->Get("name");
+ // TH1D *h; file->GetObject("name", h);
+ file->Close();
+
+
+
+ 
  h->Reset();
 
  // and enter the event loop...
